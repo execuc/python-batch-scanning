@@ -1,0 +1,6 @@
+scanner_config_mine.py
+scanner_config_nas.py
+scanner_config_default.py
+mqttConfig_nas.h
+m5stack-arduino-client/lib
+*.pyc
