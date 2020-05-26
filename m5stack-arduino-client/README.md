@@ -1,9 +1,9 @@
 # Python batch scanning arduino client
 
-Arduino HMI controlling python script of [python-scanner/](/python-scanner/)
+Arduino HMI controlling python script of [python-scanner](/python-scanner/)
 
 <p align="center">
-<img src="doc/m5stack_app.png" width="500">
+<img src="/doc/m5stack_app.png" width="500">
 </p>
 
 
