@@ -62,7 +62,7 @@ def handle_scan(parameters):
             retry = 0
             scan_files.append(filename)
             log = "Scan %d OK" %len(scan_files)
-            if parameters['batch'] != 'no':
+            if parameters['batch'] != 'no' or parameters['format'] == 'pdf_multi':
                 log += ". Wait for next scan..."
             logger.info('%s' % (log))
             send_msg(log)
@@ -71,7 +71,7 @@ def handle_scan(parameters):
             retry += 1
             time.sleep(cfg.TIMEOUT)
     
-        if ret == cfg.RET_OK and parameters['batch'] == 'no':
+        if ret == cfg.RET_OK and parameters['batch'] == 'no' and parameters['format'] != 'pdf_multi':
             logger.info('exit because of no batch defined')
             break
         elif retry > cfg.MAX_RETRY :
@@ -214,3 +214,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
